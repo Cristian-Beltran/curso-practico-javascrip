@@ -24,9 +24,21 @@ const perimeterCircle = (radio) => diameterCircle(radio) * pi;
 
 const areaCircle = (radio) => (radio ** 2) * pi;
 
+// Obtener los elementos del html
+
 
 const perimeter = document.getElementById("perimeter");
 const area = document.getElementById("area");
+
+function clear(){
+    perimeter.innerHTML="";
+    area.innerHTML="";
+    document.getElementById("square_side").value="";
+    document.getElementById("triagle_side1").value="";
+    document.getElementById("triagle_side2").value="";
+    document.getElementById("triagle_base").value="";
+    document.getElementById("circle_radio").value="";
+}
 
 function calculate_square() {
     const side = parseInt(document.getElementById("square_side").value);
@@ -56,11 +68,13 @@ const data__square = document.getElementById("data__square");
 const data__triagle = document.getElementById("data__triagle");
 const data__circle = document.getElementById("data__circle");
 const figura = document.getElementById("figura");
+
 function square() {
     data__square.style.display = 'flex';
     data__triagle.style.display = 'none';
     data__circle.style.display = 'none';
     figura.src='cuadrado.png';
+    clear()
 }
 
 function triagle() {
@@ -68,6 +82,7 @@ function triagle() {
     data__triagle.style.display = 'flex';
     data__circle.style.display = 'none';
     figura.src='triangulo.png';
+    clear()
 }
 
 function circle() {
@@ -75,4 +90,5 @@ function circle() {
     data__triagle.style.display = 'none';
     data__circle.style.display = 'flex';
     figura.src='circulo.png';
+    clear()
 }
