@@ -5,13 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Geometric Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header></header>
     <main>
-        <h1>Figuras geometricas</h1>
+        <section class="main__title">
+            <img src="icono.png" alt="icono" class="title__img">
+            <h1 class="title">Geometric calculator</h1>
+        </section>
+        <section class="main__contain">
+            <div class="main__figure">
+                <figure id="square">
+                    <img src="" alt="square">
+                    <figcaption>Square</figcaption>
+                </figure>
+                <figure id="square">
+                    <img src="" alt="triagle">
+                    <figcaption>Triangle</figcaption>
+                </figure>
+                <figure id="square">
+                    <img src="" alt="circle">
+                    <figcaption>Circle</figcaption>
+                </figure>
+            </div>
+            <div class="main__data">
+                <div id="data__square" class="data">
+                    <form>
+                        <div class="form__group">
+                            <label for="">Side: </label>
+                            <input type="text" id="square_side">
+                        </div>
+                        <input type="button" value="Calculate" id="calculate_square">
+                    </form>
+                </div>
+                <div id="data__triagle" class="data">
+                    <form>
+                        <div class="form__group">
+                            <label for="">Side 1: </label>
+                            <input type="text" id="triagle_side1">
+                        </div>
+                        <div class="form__group">
+                            <label for="">Side 2: </label>
+                            <input type="text" id="triagle_side2">
+                        </div>
+                        <div class="form__group">
+                            <label for="">Base: </label>
+                            <input type="text" id="triagle_base">
+                        </div>
+                        <div class="form__group">
+                            <label for="">Height: </label>
+                            <input type="text" id="triagle_height">
+                        </div>
+                        <input type="button" value="Calculate" id="calculate_triagle">
+                    </form>
+                </div>
+                <div id="data__circle" class="data">
+                    <form>
+                        <div class="form__group">
+                            <label for="">Radio: </label>
+                            <input type="text" id="cicle_radio">
+                        </div>
+                        <input type="button" value="Calculate" id="calculate_circle">
+                    </form>
+                </div>
+            </div>
+            <div class="main__result">
+                <div class="results">
+                    <img src="figura.png" alt="figure">
+                    <div class="result__group">
+                        <div>
+                            <div class="label">Perimeter</div>
+                            <div class="result" id="perimeter"></div>
+                        </div>
+
+                        <div>
+                            <div class="label">Area</div>
+                            <div class="result" id="area"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="main.js"></script>
 </body>
