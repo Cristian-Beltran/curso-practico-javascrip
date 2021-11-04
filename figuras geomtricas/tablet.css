@@ -1,0 +1,6 @@
+.main__contain{
+    grid-template: auto 1fr / 1fr 1fr;
+}
+.main__figure{
+    grid-column: 1 / 3;
+}

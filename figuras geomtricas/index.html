@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometric Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tablet.css" media="(min-width:600px)">
+    <link rel="stylesheet" href="desktop.css" media="(min-width:800px)">
 </head>
 
 <body>
@@ -18,71 +20,70 @@
         </section>
         <section class="main__contain">
             <div class="main__figure">
-                <figure id="square">
-                    <img src="" alt="square">
+                <figure onclick="square()">
+                    <img src="cuadrado.png" alt="square">
                     <figcaption>Square</figcaption>
                 </figure>
-                <figure id="square">
-                    <img src="" alt="triagle">
+                <figure onclick="triagle()">
+                    <img src="triangulo.png" alt="triagle">
                     <figcaption>Triangle</figcaption>
                 </figure>
-                <figure id="square">
-                    <img src="" alt="circle">
+                <figure onclick="circle()">
+                    <img src="circulo.png" alt="circle">
                     <figcaption>Circle</figcaption>
                 </figure>
             </div>
             <div class="main__data">
                 <div id="data__square" class="data">
-                    <form>
+                    <div class="info">Square calculation</div>
+                    <div class="form">
                         <div class="form__group">
-                            <label for="">Side: </label>
-                            <input type="text" id="square_side">
+                            <label for="square_side" class="label">Side: </label>
+                            <input type="number" id="square_side" >
                         </div>
-                        <input type="button" value="Calculate" id="calculate_square">
-                    </form>
+                        <input type="button" value="Calculate" onclick="calculate_square()" class="primary-button">
+                    </div>
                 </div>
                 <div id="data__triagle" class="data">
-                    <form>
+                    <div class="info">Triagle calculation</div>
+                    <div class=".form">
                         <div class="form__group">
-                            <label for="">Side 1: </label>
-                            <input type="text" id="triagle_side1">
+                            <label for="triagle_side1" class="label">Side 1: </label>
+                            <input type="number" id="triagle_side1">
                         </div>
                         <div class="form__group">
-                            <label for="">Side 2: </label>
-                            <input type="text" id="triagle_side2">
+                            <label for="triagle_side2" class="label">Side 2: </label>
+                            <input type="number" id="triagle_side2">
                         </div>
                         <div class="form__group">
-                            <label for="">Base: </label>
-                            <input type="text" id="triagle_base">
+                            <label for="triagle_base" class="label">Base: </label>
+                            <input type="number" id="triagle_base">
                         </div>
-                        <div class="form__group">
-                            <label for="">Height: </label>
-                            <input type="text" id="triagle_height">
-                        </div>
-                        <input type="button" value="Calculate" id="calculate_triagle">
-                    </form>
+                        <input type="button" value="Calculate" onclick="calculate_triagle()" class="primary-button">
+                    </div>
                 </div>
                 <div id="data__circle" class="data">
-                    <form>
+                    <div class="info">Cicle calculation</div>
+                    <div class="form">
                         <div class="form__group">
-                            <label for="">Radio: </label>
-                            <input type="text" id="cicle_radio">
+                            <label for="circle_radio" class="label">Radio: </label>
+                            <input type="number" id="circle_radio">
                         </div>
-                        <input type="button" value="Calculate" id="calculate_circle">
-                    </form>
+                        <input type="button" value="Calculate" onclick="calculate_circle()" class="primary-button">
+                    </div>
                 </div>
             </div>
             <div class="main__result">
                 <div class="results">
-                    <img src="figura.png" alt="figure">
+                    <img src="figura.png" alt="figure" id="figura">
                     <div class="result__group">
                         <div>
-                            <div class="label">Perimeter</div>
+                            <div class="label">Perimeter:</div>
                             <div class="result" id="perimeter"></div>
                         </div>
 
                         <div>
-                            <div class="label">Area</div>
+                            <div class="label">Area:</div>
                             <div class="result" id="area"></div>
                         </div>
                     </div>
