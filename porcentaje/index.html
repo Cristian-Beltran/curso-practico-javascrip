@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,41 @@
     <title>Tienda online</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header></header>
-    <main></main>
-   <script src="js/main.js"></script> 
+    <main>
+        <section class="main__contain">
+            <section class="main__title">
+                <img src="img/logo.png" alt="porcentaje">
+                <div class="title">Taller #2</div>
+            </section>
+            <section class="main__card">
+                <div class="main__info">
+                    <p>
+                        Calculadora de porcentajes
+                    </p>
+                </div>
+                <div class="form__contain">
+                    <form>
+                        <div class="form__group">
+                            <label for="price" class="label">Precio original</label>
+                            <input type="text" placeholder="Precio" id="price" class="input">
+                        </div>
+                        <div class="form__group">
+                            <label for="discount" class="label">Descuento en porcentaje (%)</label>
+                            <input type="text" placeholder="Descuento %" id="discount" class="input">
+                        </div>
+                        <input type="button" onclick="calculate()" value="Calcular" class="primary-button">
+                    </form>
+                </div>
+                <div class="main__result">
+                    <div class="result__title">El monto total a pagar es:</div>
+                    <div class="result" id="result">0.00$</div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
