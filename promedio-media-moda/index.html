@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="main__contain">
+            <div class="main__title">
+                Calculadora de promedio, media y moda.
+            </div>
+            <div class="main__form">
+                <form>
+                    <div class="group__form">
+                        <label for="data" class="label__form">Ingrese el conjunto de datos</label>
+                        <input type="text" class="input__form" id="data" placeholder="1,2,3,4,5">
+                    </div>
+                    <button type="button" class="primary-button" onclick="calculate()">Calcular</button>
+                </form>
+            </div>
+            <div class="main__result">
+                <div class="group__result">
+                    <div class="label__result">Promedio</div>
+                    <div class="result" id="promedio"></div>
+                </div>
+                <div class="group__result">
+                    <div class="label__result">Mediana</div>
+                    <div class="result" id="mediana"></div>
+                </div>
+                <div class="group__result">
+                    <div class="label__result">Moda</div>
+                    <div class="result" id="moda"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
